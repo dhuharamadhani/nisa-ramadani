@@ -11,7 +11,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
+  email: 'nisaramadani.icha@gmail.com',
   github: 'https://github.com/dhuharamadhani',
   x: 'https://twitter.com/x',
   // twitter: 'https://twitter.com/Twitter',
