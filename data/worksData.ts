@@ -8,7 +8,7 @@ interface Project {
 const worksData: Project[] = [
   {
     title: 'The Unseen Self',
-    description: `A work-in-progress photo performance art, an experiment about self-gaze. The Unseen Self  has been exhibited on Presentasi Preposisi: Gotong Royong untuk Seni dan Kesetaraan, 15-24 August 2022 at Institut Français Indonesia, Yogyakarta.`,
+    description: `A work-in-progress photo performance art, an experiment about self-gaze. The Unseen Self  has been exhibited on "Presentasi Preposisi: Gotong Royong untuk Seni dan Kesetaraan", 15-24 August 2022 at Institut Français Indonesia, Yogyakarta.`,
     imgSrc: '/static/images/the-unseen-self/the-unseen-self-1.jpeg',
     href: '/blog/the-unseen-self',
   },
