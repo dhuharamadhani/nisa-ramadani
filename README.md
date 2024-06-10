@@ -139,7 +139,7 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 - 3 different blog layouts
 - 2 different blog listing layouts
 - Support for nested routing of blog posts
-- Projects page
+- Works page
 - Preconfigured security headers
 - SEO friendly with RSS feed, sitemaps and more!
 
@@ -164,7 +164,7 @@ npx degit 'timlrx/tailwind-nextjs-starter-blog'
 3. Modify the content security policy in `next.config.js` if you want to use
    other analytics provider or a commenting solution other than giscus.
 4. Personalize `authors/default.md` (main author)
-5. Modify `projectsData.ts`
+5. Modify `worksData.ts`
 6. Modify `headerNavLinks.ts` to customize navigation links
 7. Add blog posts
 8. Deploy on Vercel
@@ -199,7 +199,7 @@ Edit the layout in `app` or content in `data`. With live reloading, the pages au
 
 `data/authors/default.md` - default author information (required). Additional authors can be added as files in `data/authors`.
 
-`data/projectsData.js` - data used to generate styled card on the projects page.
+`data/worksData.js` - data used to generate styled card on the works page.
 
 `data/headerNavLinks.js` - navigation links.
 

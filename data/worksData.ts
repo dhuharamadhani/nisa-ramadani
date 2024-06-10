@@ -5,7 +5,7 @@ interface Project {
   imgSrc?: string,
 }
 
-const projectsData: Project[] = [
+const worksData: Project[] = [
   {
     title: 'A Search Engine',
     description: `What if you could look up any information in the world? Webpages, images, videos
@@ -22,4 +22,4 @@ const projectsData: Project[] = [
   },
 ]
 
-export default projectsData
+export default worksData
