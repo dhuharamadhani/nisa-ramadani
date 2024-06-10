@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Nisa Ramadani',
+  title: 'Nisa Ramadani Portfolio',
   author: 'Nisa Ramadani',
   headerTitle: 'Nisa Ramadani',
   description: 'A portfolio site of Nisa Ramadani',
