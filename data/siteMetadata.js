@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: 'Nisa Ramadani',
   description: 'A portfolio site of Nisa Ramadani',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://nisaramadani.vercel.app',
   siteRepo: 'https://github.com/dhuharamadhani/nisa-ramadani',
   siteLogo: '/static/images/logo.png',
