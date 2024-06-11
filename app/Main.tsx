@@ -1,10 +1,7 @@
 import worksData from '@/data/worksData'
 import Card from '@/components/Card'
-import { genPageMetadata } from 'app/seo'
 
-export const metadata = genPageMetadata({ title: 'Works' })
-
-export default function Works() {
+export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
