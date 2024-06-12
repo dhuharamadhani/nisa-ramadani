@@ -10,7 +10,7 @@ const MAX_DISPLAY = 3
 export default function Home({ posts }) {
   return (
     <>
-      <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+      <p className="text-lg font-style: italic leading-7 text-gray-500 dark:text-gray-400">
         {siteMetadata.description}
       </p>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -20,7 +20,7 @@ export default function Home({ posts }) {
           </h1>
         </div>
         <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
+          <div className="-m-4 flex flex-wrap ">
             {worksData.map((d) => (
               <Card
                 key={d.title}
