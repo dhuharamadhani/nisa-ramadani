@@ -36,6 +36,12 @@ const worksData: Project[] = [
     imgSrc: '/static/images/manusia-silver/manusia-silver-sebuah-pengantar-1.jpeg',
     href: '/archive/performance-art/manusia-silver-sebuah-pengantar',
   },
+  {
+    title: 'Mautopia',
+    description: `Involved as an actor at Indonesia Dramatic Reading Festival (IDRF)-Asian Playwrights Meeting; States of Crisis, reading Mautopia as one of the scripts presented in that event. IDRF 2019 involved scriptwriters from Cambodia, Indonesia, Japan, Malaysia, Philippines, Singapore, and Thailand. The Mautopia script is written by Ridhwan Saidi, an independent filmmaker and writer from Malaysia.`,
+    imgSrc: '/static/images/mautopia/mautopia-1.jpeg',
+    href: '/archive/performing-art/mautopia',
+  },
 ]
 
 export default worksData
