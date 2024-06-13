@@ -1,8 +1,8 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
   { href: '/archive', title: 'Archives' },
-  
   { href: '/sketches', title: 'Sketches' },
+  { href: '/timeline', title: 'Activities' },
   { href: '/bio', title: 'Biography' },
 ]
 
