@@ -14,6 +14,9 @@ export default function Sketches() {
           </h1>
         </div>
         <div className="container py-12">
+        <p className="text-center text-3xl font-bold leading-7 text-gray-700 dark:text-gray-200 pb-10">
+            Performance Art
+          </p>
           <div className="-m-4 flex flex-wrap">
             {sketchesData.map((d) => (
               <SketchesCard
