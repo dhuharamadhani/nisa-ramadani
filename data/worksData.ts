@@ -30,6 +30,12 @@ const worksData: Project[] = [
     imgSrc: '/static/images/the-brief-history-of-dance/the-brief-history-of-dance-1.jpeg',
     href: '/archive/performing-art/the-brief-history-of-dance',
   },
+  {
+    title: 'Manusia Silver: Sebuah Pengantar',
+    description: `Manusia Silver: Sebuah Pengantar was the final presentation of the workshop entitled Body Journey, curated by Iwan Wijono. This focus group discussion (FGD) as happening art was held on 7 Desember 2021 at Cemeti:  Institute for Art and Society. The recorded audio of FGD was installed in Body Journey — 100 Years Joseph Beuys exhibition on 5-11 Desember 2021 at Cemeti Institute for Art and Society, with other artworks from other participants.`,
+    imgSrc: '/static/images/manusia-silver/manusia-silver-sebuah-pengantar-1.jpeg',
+    href: '/archive/performance-art/manusia-silver-sebuah-pengantar',
+  },
 ]
 
 export default worksData
