@@ -3,6 +3,9 @@ const siteMetadata = {
   title: 'Nisa Ramadani Portfolio',
   author: 'Nisa Ramadani',
   headerTitle: 'Nisa Ramadani',
+  dev: 'Built by Dhuha Ramadhani',
+  timlrx: 'MIT License (c) Timothy Lin',
+  Th1nhNg0: 'Ngô Phú Thịnh',
   description: 'A portfolio site of Nisa Ramadani',
   language: 'en-us',
   theme: 'light', // system, dark or light
@@ -10,7 +13,6 @@ const siteMetadata = {
   siteRepo: 'https://github.com/dhuharamadhani/nisa-ramadani',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'nisaramadani.icha@gmail.com',
   github: 'https://github.com/dhuharamadhani',
   x: 'https://twitter.com/x',

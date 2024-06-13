@@ -14,9 +14,14 @@ export default function Footer() {
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>
           <div>{` • `}</div>
+          <Link href="https://x.com/dhuhar">{siteMetadata.dev}</Link>
+        </div>
+        <div className="mb-2 flex space-x-2 text-xs text-gray-500 dark:text-gray-400">
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/LICENSE">{siteMetadata.timlrx}</Link>
+          <div>{` & `}</div>
+          <Link href="https://github.com/Th1nhNg0/thinhcorner.com">{siteMetadata.Th1nhNg0}</Link>
         </div>
       </div>
     </footer>
