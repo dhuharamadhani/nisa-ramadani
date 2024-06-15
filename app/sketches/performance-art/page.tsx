@@ -14,7 +14,7 @@ export default function PerformanceArtSketches() {
           </h1>
         </div>
         <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
+          <div className="place-content-center -m-4 flex flex-wrap">
             {performanceArtSketchesData.map((d) => (
               <SketchesCard
                 key={d.title}
