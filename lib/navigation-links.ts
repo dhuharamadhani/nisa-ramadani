@@ -3,7 +3,7 @@ import { ContentNavItem, NavItem } from 'types';
 const content: ContentNavItem[] = [
   {
     title: "Performance Art",
-    href: "/sketches",
+    href: "/sketches/performance-art",
     description: "My performance art sketches.",
   },
   {
