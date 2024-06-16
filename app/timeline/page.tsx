@@ -6,6 +6,9 @@ export const metadata = {
   description: "My timeline.",
 };
 
+const LINK_CLASSNAME = "text-sm text-pink-500 hover:underline";
+const arrowIcon = "→";
+
 export default function AboutView() {
   return (
     <div>
@@ -15,39 +18,17 @@ export default function AboutView() {
             Activities
           </h1>
         </div>
-      <ol className="pt-10 text-2xl relative ml-3 space-y-10 border-l border-gray-100 dark:border-[#211C1C]">
-        <Item
-          title="Co-directing 'Belajar Menjadi Laki-laki' with GMT Jogjadrama"
-          icon="➤"
+      <ol className="pt-10 text-base relative ml-3 space-y-4 border-l border-gray-100 dark:border-[#211C1C]">
+        <Item icon={arrowIcon}
+          title="Co-directing 'Belajar Menjadi Laki-laki' with GMT Jogjadrama."
           time="2024-04-30"
-        >
-          <a
-            href="/archive/performing-art/belajar-menjadi-laki-laki"
-            className="text-base text-pink-500 hover:underline"
-          >
-            Read more  &rarr;
-          </a>
-        </Item>
-        <Item
-          title="Involves in 'Mencari Kabar' performance"
-          icon="➤"
+          link="/archive/performing-art/belajar-menjadi-laki-laki"
+        ></Item>
+        <Item icon={arrowIcon}
+          title="Involves in 'Mencari Kabar' performance."
           time="2022-07-22"
-        >
-          <picture>
-            <RoundedImageRaw src="/static/images/mencari-kabar/mencari-kabar-1.webp" alt="Dokumentasi Mencari Kabar" />
-          </picture>
-          <a
-            className="text-base text-pink-500 hover:underline"
-            href="/archive/performance-art/mencari-kabar"
-          >
-            Read more  &rarr;
-          </a>
-        </Item>
-        <Item
-          title="Born in Yogyakarta, Indonesia"
-          icon="👶"
-          time="1995-02-04"
-        />
+          link="/archive/performance-art/mencari-kabar"
+        ></Item>
       </ol>
     </div>
   </div>
@@ -59,11 +40,13 @@ function Item({
   children,
   icon,
   time = new Date().toISOString(),
+  link,
 }: {
   title: string;
   children?: React.ReactNode;
   icon: string;
   time?: string;
+  link?: string;
 }) {
   return (
     <li className="ml-6">
@@ -74,14 +57,28 @@ function Item({
         {title}
       </h2>
       <time
-        className="block mb-5 leading-none text-neutral-600 dark:text-neutral-400 text-sm"
+        className="block mb-1 leading-none text-neutral-600 dark:text-neutral-400 text-sm"
         dateTime={time}
       >
         {formatDistanceToNow(new Date(time), {
           addSuffix: true,
         })}
-      </time>
+      </time> 
       {children}
+      {link && (
+        <a
+          href={link}
+          className={LINK_CLASSNAME}
+        >
+          Read more  &rarr;
+        </a>
+      )}
     </li>
   );
 }
+
+{/*
+          <picture>
+            <RoundedImageRaw src="/static/images/mencari-kabar/mencari-kabar-1.webp" alt="Dokumentasi Mencari Kabar" />
+          </picture>
+*/}
