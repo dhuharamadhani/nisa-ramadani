@@ -84,7 +84,7 @@ function createSearchIndex(allArchives) {
   ) {
     writeFileSync(
       `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`,
-      JSON.stringify(allCoreContent(sortPosts(allArchives)))
+      JSON.stringify((sortPosts(allArchives)))
     )
     console.log('Local search index generated...')
   }
@@ -121,6 +121,10 @@ export const Archive = defineDocumentType(() => ({
         image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),
+    },
+    bodyRaw: {
+      type: 'string',
+      resolve: (doc) => doc.body.raw,
     },
   },
 }))
