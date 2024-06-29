@@ -9,6 +9,7 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import SocialIcon from '@/components/social-icons'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const postDateTemplate: Intl.DateTimeFormatOptions = {
@@ -29,7 +30,7 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
-  const discussUrl = (path) =>
+  const xUrl = (path) =>
     `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title} ${siteMetadata.siteUrl}/${path}`)}`
   const threadsUrl = (path) =>
     `https://www.threads.net/intent/post?text=${encodeURIComponent(`${title} ${siteMetadata.siteUrl}/${path}`)}`
@@ -97,18 +98,13 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
-              <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(path)} rel="nofollow">
-                  Share on X
-                </Link>
-                {`  -  `}
-                <Link href={threadsUrl(path)} rel="nofollow">
-                  Share on Threads
-                </Link>
-                {`  -  `}
-                <Link href={whatsappUrl(path)} rel="nofollow">
-                  Share on WhatsApp
-                </Link>
+              <div className="pb-6 pt-6 text-ms text-gray-700 dark:text-gray-300">
+                <div className="mb-3 flex items-center space-x-4">
+                <p>Share {`  →  `}</p>
+                <SocialIcon kind="whatsapp" href={whatsappUrl(path)} />
+                <SocialIcon kind="x" href={xUrl(path)} />              
+                <SocialIcon kind="threads" href={threadsUrl(path)} />
+                </div>
               </div>
 {/*
               {siteMetadata.comments && (
