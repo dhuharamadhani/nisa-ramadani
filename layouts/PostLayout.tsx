@@ -11,10 +11,6 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
-const discussUrl = (path) =>
-  `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
-const threadsUrl = (path) =>
-  `https://www.threads.net/intent/post?text=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
   year: 'numeric',
@@ -33,7 +29,12 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
-
+  const discussUrl = (path) =>
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title} ${siteMetadata.siteUrl}/${path}`)}`
+  const threadsUrl = (path) =>
+    `https://www.threads.net/intent/post?text=${encodeURIComponent(`${title} ${siteMetadata.siteUrl}/${path}`)}`
+  const whatsappUrl = (path) =>
+    `https://wa.me/?text=${encodeURIComponent(`${title} ${siteMetadata.siteUrl}/${path}`)}`
   return (
     <SectionContainer>
       <ScrollTopAndComment />
@@ -103,6 +104,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 {`  -  `}
                 <Link href={threadsUrl(path)} rel="nofollow">
                   Share on Threads
+                </Link>
+                {`  -  `}
+                <Link href={whatsappUrl(path)} rel="nofollow">
+                  Share on WhatsApp
                 </Link>
               </div>
 {/*
